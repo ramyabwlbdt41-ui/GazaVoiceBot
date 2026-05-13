@@ -1,3 +1,4 @@
 FROM eclipse-temurin:17-jdk-jammy
-COPY voicebot-1.0-SNAPSHOT.jar app.jar
+WORKDIR /app
+COPY *.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
